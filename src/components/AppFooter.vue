@@ -4,6 +4,8 @@ import FooterTop from './FooterTop.vue';
 export default {
   components: { FooterTop },
   data() {
+    return {
+    }
 
   }
 }
@@ -17,6 +19,8 @@ export default {
 
 <style scoped>
 footer {
+  color: white;
+
   height: calc(100vh - 530px);
   background-image: url('../assets/img/dc-logo-bg.png'), url('../assets/img/footer-bg.jpg');
   background-repeat: no-repeat, no-repeat;
