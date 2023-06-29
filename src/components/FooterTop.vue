@@ -135,14 +135,18 @@ export default {
         </nav>
         <nav id="shop">
           <h3>SHOP</h3>
-          <li v-for="item in shopLists"><a :href="item.url">{{ item.text }}</a></li>
+          <ul>
+            <li v-for="item in shopLists"><a :href="item.url">{{ item.text }}</a></li>
+          </ul>
         </nav>
       </div>
       <div>
 
         <nav id="dc" class="center">
           <h3>DC</h3>
-          <li v-for="item in dcLists"><a :href="item.url">{{ item.text }}</a></li>
+          <ul>
+            <li v-for="item in dcLists"><a :href="item.url">{{ item.text }}</a></li>
+          </ul>
         </nav>
       </div>
 
@@ -150,7 +154,9 @@ export default {
 
         <nav id="sites" class="right">
           <h3>SITES</h3>
-          <li v-for="item in siteLists"><a :href="item.url">{{ item.text }}</a></li>
+          <ul>
+            <li v-for="item in siteLists"><a :href="item.url">{{ item.text }}</a></li>
+          </ul>
         </nav>
       </div>
     </div>
