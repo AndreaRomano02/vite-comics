@@ -180,6 +180,10 @@ export default {
   li {
     font-size: 0.8rem;
     margin-bottom: 5px;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 </style>

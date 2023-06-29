@@ -16,6 +16,7 @@ export default {
   <footer>
     <FooterTop />
 
+    <FooterBottom />
   </footer>
 </template>
 
