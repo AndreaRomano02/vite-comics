@@ -1,0 +1,27 @@
+/* Variable */
+$font : 'Open Sans', 'Open Sans Condensed';
+
+/* RESET */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family:  $font;
+}
+
+li{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+  color: currentColor;
+}
+
+.container{
+  margin: 0 auto;
+  max-width: 1200px;
+}
