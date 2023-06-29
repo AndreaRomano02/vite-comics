@@ -63,7 +63,9 @@ export default {
 <template>
   <header class="container">
     <figure>
-      <img src="../assets/img/dc-logo.png" alt="Logo">
+      <a href="#">
+        <img src="../assets/img/dc-logo.png" alt="Logo">
+      </a>
     </figure>
     <nav>
       <ul>
@@ -82,7 +84,7 @@ header {
   height: 100px;
   @include flex-center-y;
   justify-content: space-between;
-
+  padding-bottom: 5px;
 }
 
 /* LOGO */
@@ -94,6 +96,9 @@ img {
 /* NAV BAR */
 nav {
   height: 100%;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: bold
 }
 
 ul {
