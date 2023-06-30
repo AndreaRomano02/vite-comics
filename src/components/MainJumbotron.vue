@@ -29,14 +29,18 @@ export default {
       <div class="current">CURRENT SERIES</div>
       <div v-for="game in comics" class="card">
         <figure>
-          <img :src="game.thumb" :alt="game.series">
+          <div class="img-container">
+            <img :src="game.thumb" :alt="game.series">
+          </div>
           <figcaption>{{ game.series }}</figcaption>
         </figure>
       </div>
 
       <div v-for="game in comics" class="card" v-show="load">
         <figure>
-          <img :src="game.thumb" :alt="game.series">
+          <div class="img-container">
+            <img :src="game.thumb" :alt="game.series">
+          </div>
           <figcaption>{{ game.series }}</figcaption>
         </figure>
       </div>
@@ -60,7 +64,7 @@ export default {
 .card-container {
   height: 100%;
   padding: 3rem 0;
-  @include flex-center;
+  @include flex-center-x;
   flex-wrap: wrap;
 
   position: relative;
@@ -68,20 +72,24 @@ export default {
 
 .card {
   width: calc(100% / 6);
-  height: 300px;
 
+  margin-bottom: 40px;
   padding: 0 1rem;
   font-size: 0.9rem;
 }
 
+.img-container {
+  height: 168px;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
 img {
   display: block;
-  max-width: 100%;
-  height: 200px;
-  width: 200px;
+  width: 100%;
+  height: 300px;
   object-fit: cover;
-
-  margin-bottom: 20px;
 }
 
 .current {
