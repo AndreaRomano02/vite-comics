@@ -8,8 +8,17 @@ export default {
   },
   data() {
     return {
+      load: false,
+      messageButton: 'LOAD MORE',
     }
-  }
+  },
+  methods: {
+    isLoaded() {
+      this.load = !this.load;
+      if (this.messageButton === 'LOAD MORE') this.messageButton = 'LOAD LESS'
+      else this.messageButton = 'LOAD MORE'
+    },
+  },
 }
 </script>
 
@@ -25,7 +34,14 @@ export default {
         </figure>
       </div>
 
-      <button>LOAD MORE</button>
+      <div v-for="game in games" class="card" v-show="load">
+        <figure>
+          <img :src="game.thumb" :alt="game.series">
+          <figcaption>{{ game.series }}</figcaption>
+        </figure>
+      </div>
+
+      <button @click="isLoaded">{{ messageButton }}</button>
 
     </div>
   </div>
