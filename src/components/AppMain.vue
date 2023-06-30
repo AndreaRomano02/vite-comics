@@ -4,7 +4,7 @@ import MainJumbotron from './MainJumbotron.vue';
 export default {
   components: { MainJumbotron },
   props: {
-    games: Array,
+    comics: Array,
   },
   data() {
     return {
@@ -42,7 +42,7 @@ export default {
 
 <template>
   <main>
-    <MainJumbotron :games="this.games" />
+    <MainJumbotron :comics="comics" />
 
     <section>
       <nav class="container">

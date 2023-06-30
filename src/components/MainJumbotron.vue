@@ -4,7 +4,7 @@ import JumbotronBgImage from './MainBgImage.vue';
 export default {
   components: { JumbotronBgImage },
   props: {
-    games: Array,
+    comics: Array,
   },
   data() {
     return {
@@ -27,14 +27,14 @@ export default {
     <JumbotronBgImage />
     <div class="container card-container">
       <div class="current">CURRENT SERIES</div>
-      <div v-for="game in games" class="card">
+      <div v-for="game in comics" class="card">
         <figure>
           <img :src="game.thumb" :alt="game.series">
           <figcaption>{{ game.series }}</figcaption>
         </figure>
       </div>
 
-      <div v-for="game in games" class="card" v-show="load">
+      <div v-for="game in comics" class="card" v-show="load">
         <figure>
           <img :src="game.thumb" :alt="game.series">
           <figcaption>{{ game.series }}</figcaption>
