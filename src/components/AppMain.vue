@@ -1,8 +1,9 @@
 <script>
 import MainJumbotron from './MainJumbotron.vue';
+import MainBgImage from './MainBgImage.vue';
 
 export default {
-  components: { MainJumbotron },
+  components: { MainJumbotron, MainBgImage },
   data() {
     return {
       mainLists: [
@@ -39,6 +40,7 @@ export default {
 
 <template>
   <main>
+    <MainBgImage />
     <MainJumbotron />
 
     <section>
