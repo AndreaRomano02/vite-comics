@@ -1,9 +1,11 @@
 <script>
 import MainJumbotron from './MainJumbotron.vue';
-import MainBgImage from './MainBgImage.vue';
 
 export default {
-  components: { MainJumbotron, MainBgImage },
+  components: { MainJumbotron },
+  props: {
+    games: Array,
+  },
   data() {
     return {
       mainLists: [
@@ -40,8 +42,7 @@ export default {
 
 <template>
   <main>
-    <MainBgImage />
-    <MainJumbotron />
+    <MainJumbotron :games="this.games" />
 
     <section>
       <nav class="container">

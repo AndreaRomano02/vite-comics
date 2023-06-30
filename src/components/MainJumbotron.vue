@@ -1,5 +1,11 @@
 <script>
+import JumbotronBgImage from './MainBgImage.vue';
+
 export default {
+  components: { JumbotronBgImage },
+  props: {
+    games: Array,
+  },
   data() {
     return {
     }
@@ -9,7 +15,9 @@ export default {
 
 <template>
   <div id="jumbotron">
-    <div class="container">
+    <JumbotronBgImage />
+
+    <div class="container card-container">
 
       <!-- Ho dovuto mettere la mustrush sintax poichè mi dava errore se lo scrivevo normalmente  -->
       <a href="#">
@@ -24,13 +32,12 @@ export default {
 @use '../assets/sass/_variable.scss' as *;
 
 #jumbotron {
-  height: 130px;
   background-color: $bg_jumbo;
   color: white;
   font-weight: 900;
 }
 
-.container {
+.card-container {
   height: 100%;
   @include flex-center-y
 }
