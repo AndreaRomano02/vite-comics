@@ -16,13 +16,17 @@ export default {
 <template>
   <div id="jumbotron">
     <JumbotronBgImage />
-
     <div class="container card-container">
+      <div class="current">CURRENT SERIES</div>
+      <div v-for="game in games" class="card">
+        <figure>
+          <img :src="game.thumb" :alt="game.series">
+          <figcaption>{{ game.series }}</figcaption>
+        </figure>
+      </div>
 
-      <!-- Ho dovuto mettere la mustrush sintax poichè mi dava errore se lo scrivevo normalmente  -->
-      <a href="#">
-        <h2> {{ '--> Content goes here < --' }} </h2>
-      </a>
+      <button>LOAD MORE</button>
+
     </div>
   </div>
 </template>
@@ -39,6 +43,50 @@ export default {
 
 .card-container {
   height: 100%;
-  @include flex-center-y
+  padding: 3rem 0;
+  @include flex-center;
+  flex-wrap: wrap;
+
+  position: relative;
+}
+
+.card {
+  width: calc(100% / 6);
+  height: 300px;
+
+  padding: 0 1rem;
+  font-size: 0.9rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+
+  margin-bottom: 20px;
+}
+
+.current {
+  background-color: $blue;
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  font-weight: bolder;
+
+  position: absolute;
+  left: 15px;
+  top: -35px;
+}
+
+button {
+  background-color: $blue;
+  border: none;
+  color: white;
+  font-weight: bolder;
+  padding: 0.8rem 3rem;
+  cursor: pointer;
+
 }
 </style>
